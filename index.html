@@ -110,7 +110,7 @@
               state[item.event.name] = state[item.event.name] || {};
               state[item.event.name].Total = state[item.event.name].Total + 1 || 1;
               _.each(item.event.properties, function(val, prop) {
-                //if (!defaultProperties[prop])
+                if (!defaultProperties[prop])
                   state[item.event.name][prop] = state[item.event.name][prop] + 1 || 1;
               });
             }
@@ -118,7 +118,7 @@
               state['People Properties'] = state['People Properties'] || {};
               state['People Properties'].Total = 1;
               _.each(item.user.properties, function(val, prop) {
-                //if (!defaultPeopleProperties[prop])
+                if (!defaultPeopleProperties[prop])
                   state['People Properties'][prop] = 1;
               });
             }
